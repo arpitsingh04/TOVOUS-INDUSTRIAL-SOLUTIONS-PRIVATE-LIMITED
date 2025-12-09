@@ -180,36 +180,69 @@
 
 /* FAQ Section */
 .faq-section {
-  background-color: var(--neutral-light-gray);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.faq-subtitle {
+  color: var(--neutral-gray);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin-top: var(--space-xs);
 }
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-lg);
 }
 
 .faq-item {
   background-color: var(--neutral-white);
-  border-radius: var(--border-radius-md);
+  border-radius: 12px;
   padding: var(--space-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-red);
+  position: relative;
 }
 
 .faq-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.faq-number {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #c41e3a 100%);
+  color: var(--neutral-white);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
 }
 
 .faq-item h3 {
   margin-bottom: var(--space-sm);
-  color: var(--primary-red);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #1a202c;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  padding-right: 50px;
 }
 
 .faq-item p {
-  color: var(--neutral-gray);
-  line-height: 1.6;
+  color: #4a5568;
+  line-height: 1.7;
   margin-bottom: 0;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
@@ -289,6 +322,12 @@
     padding: var(--space-md);
   }
 
+  .faq-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
   .map-container {
     height: 300px;
   }
@@ -334,8 +373,17 @@
     padding: var(--space-xs);
   }
 
+  .faq-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    top: -12px;
+    right: 15px;
+  }
+
   .faq-item h3 {
     font-size: 0.9rem;
+    padding-right: 40px;
   }
 
   .faq-item p {
@@ -397,8 +445,17 @@
     padding: 8px;
   }
 
+  .faq-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: -10px;
+    right: 10px;
+  }
+
   .faq-item h3 {
     font-size: 0.8rem;
+    padding-right: 35px;
   }
 
   .faq-item p {

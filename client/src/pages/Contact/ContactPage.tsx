@@ -23,9 +23,9 @@ const ContactPage: React.FC = () => {
             <div className="contact-info">
               <h2 className="section-title">Get In Touch</h2>
               <p className="contact-intro">
-                Whether you're an individual looking for domestic help or a
-                business seeking skilled workers, our team is ready to assist
-                you with professional care.
+                Whether you need industrial maintenance services, fabrication and erection,
+                or technical manpower solutions, our team is ready to assist you with
+                professional expertise.
               </p>
 
               <div className="contact-details">
@@ -36,13 +36,8 @@ const ContactPage: React.FC = () => {
                   <div className="contact-text">
                     <h3>Email Us</h3>
                     <p>
-                      <a href="mailto:intralinkgroup.qa@gmail.com">
-                        intralinkgroup.qa@gmail.com
-                      </a>
-                    </p>
-                    <p>
-                      <a href="mailto:intralinkqatar@hotmail.com">
-                        intralinkqatar@hotmail.com
+                      <a href="mailto:info@tovous.in">
+                        info@tovous.in
                       </a>
                     </p>
                   </div>
@@ -55,27 +50,7 @@ const ContactPage: React.FC = () => {
                   <div className="contact-text">
                     <h3>Call Us</h3>
                     <p>
-                      <a href="tel:+97470994833">+974-70994833</a>
-                      <br />
-                      <a href="tel:+97477866538">+974-77866538</a>
-                      <br />
-                      <a href="tel:+97430483372">+974-30483372</a>
-                      <br />
-                      <a href="tel:+97455903227">+974-55903227</a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="contact-detail-item">
-                  <div className="contact-icon">
-                    <Smartphone size={24} />
-                  </div>
-                  <div className="contact-text">
-                    <h3>WhatsApp</h3>
-                    <p>
-                      <a href="https://wa.me/97470994833">+974-70994833</a>
-                      <br />
-                      <a href="https://wa.me/97477866538">+974-77866538</a>
+                      <a href="tel:+912235983690">+91-22-35983690</a>
                     </p>
                   </div>
                 </div>
@@ -85,11 +60,27 @@ const ContactPage: React.FC = () => {
                     <MapPin size={24} />
                   </div>
                   <div className="contact-text">
-                    <h3>Visit Us</h3>
+                    <h3>Registered Office</h3>
                     <address>
-                     Intralink Office,
+                      Biju Pattanaik Commercial Complex,
                       <br />
-                      Suq Al Majd Building 1st Floor Office No 01,02,07 Al-Garaffa, Doha-Qatar.
+                      Room No:07, Ground Floor,
+                      <br />
+                      Chandrasekharpur, Bhubaneswar-751016
+                    </address>
+                  </div>
+                </div>
+
+                <div className="contact-detail-item">
+                  <div className="contact-icon">
+                    <MapPin size={24} />
+                  </div>
+                  <div className="contact-text">
+                    <h3>Mumbai Office</h3>
+                    <address>
+                      Shop No-18, Mahavir Kalpavruksha,
+                      <br />
+                      Kasarvadavali, Thane-400615
                     </address>
                   </div>
                 </div>
@@ -101,9 +92,9 @@ const ContactPage: React.FC = () => {
                   <div className="contact-text">
                     <h3>Business Hours</h3>
                     <p>
-                      Sunday - Thursday: 09:00 AM to 06:00 PM
+                      Monday - Friday: 09:00 AM to 06:00 PM
                       <br />
-                      Friday: Closed
+                      Saturday: 09:00 AM to 02:00 PM
                     </p>
                   </div>
                 </div>
@@ -163,65 +154,56 @@ const ContactPage: React.FC = () => {
       {/* FAQ Section */}
       <section className="section faq-section">
         <div className="container">
-          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="faq-header">
+            <h2 className="section-title">Frequently Asked Questions</h2>
+            <p className="faq-subtitle">Find answers to common questions about our industrial services</p>
+          </div>
           <div className="faq-grid">
             <div className="faq-item">
-              <h3>How long does the recruitment process take?</h3>
+              <div className="faq-number">01</div>
+              <h3>What industries do you serve?</h3>
               <p>
-                The timeline varies depending on the position and requirements.
-                Typically, domestic staff recruitment takes 4-6 weeks from
-                initial consultation to placement, while skilled worker
-                recruitment may take 6-8 weeks due to additional verifications
-                and visa processing.
+                We serve manufacturing, infrastructure, oil & gas, steel, cement, and engineering sectors. Our clients include major industrial and public sector organizations like ONGC, IOCL, GAIL, and IREL.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>Do you handle visa and immigration requirements?</h3>
+              <div className="faq-number">02</div>
+              <h3>What services does Tovous provide?</h3>
               <p>
-                Yes, we provide full support for visa applications and
-                immigration requirements. Our team has extensive experience
-                navigating the immigration processes for various countries.
+                We offer Operations & Maintenance (O&M), Fabrication & Erection (F&E), Fire Protection Systems, Electrical & Instrumentation works, and Technical Manpower Supply. All services are delivered with a focus on safety, quality, and timely execution.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>
-                What happens if the placed worker doesn't meet expectations?
-              </h3>
+              <div className="faq-number">03</div>
+              <h3>How long does project execution take?</h3>
               <p>
-                We offer a replacement guarantee period (typically 3 months)
-                during which we will find a suitable replacement if the original
-                placement doesn't work out, subject to our terms and conditions.
+                Project timelines vary based on scope and complexity. We pride ourselves on fast mobilization and on-time delivery. Our team works closely with clients to establish realistic timelines and meet all project milestones within budget.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>What countries do you recruit from?</h3>
+              <div className="faq-number">04</div>
+              <h3>Do you provide turnkey solutions?</h3>
               <p>
-                We primarily recruit from the Philippines, Uganda, Ghana, Kenya,
-                Indonesia, Sri Lanka, Ethiopia, India, Bangladesh, and Burundi,
-                but can source from other countries based on specific
-                requirements.
+                Yes, we provide complete turnkey solutions for Fire Protection Systems and other industrial projects, including design, engineering, supply, installation, testing, and commissioning.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>What verification processes do you use?</h3>
+              <div className="faq-number">05</div>
+              <h3>What is your approach to safety and compliance?</h3>
               <p>
-                Our verification process includes background checks, skills
-                assessment, reference verification, health screening, and where
-                applicable, certification validation to ensure candidates meet
-                our quality standards.
+                Safety is our top priority. We follow strict H.S.E. policies and invest resources to safeguard the workplace, client assets, and the environment. Every worker has the right to a hazard-free working environment.
               </p>
             </div>
 
             <div className="faq-item">
-              <h3>Can you provide temporary or project-based staffing?</h3>
+              <div className="faq-number">06</div>
+              <h3>Can you handle major shutdown and commissioning work?</h3>
               <p>
-                Yes, in addition to permanent placements, we offer temporary and
-                project-based staffing solutions to meet seasonal or short-term
-                needs.
+                Absolutely. Our trained technical team is capable of undertaking heavy fabrication, erection, commissioning, and major shutdown projects with proven expertise in complex industrial environments.
               </p>
             </div>
           </div>

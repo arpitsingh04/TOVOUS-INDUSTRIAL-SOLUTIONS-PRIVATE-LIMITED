@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
               />
             </NavLink>
             <p className="footer-description">
-              Intralink Manpower Recruitment Agency has been providing quality
-              manpower solutions since 1994, with nearly 30 years of excellence
-              in recruitment and business services.
+              Tovous Industrial Solutions Pvt Ltd delivers high-quality industrial services
+              to clients across manufacturing, infrastructure, oil & gas, steel, cement and
+              engineering sectors since 2021.
             </p>
             
            
@@ -65,29 +65,30 @@ const Footer: React.FC = () => {
                 <div className="h1st">
                   <li>
                     <span>Email:</span>
-                    <a href="mailto:intralinkgroup.qa@gmail.com">intralinkgroup.qa@gmail.com</a>
-                    <a href="mailto:intralinkqatar@hotmail.com">intralinkqatar@hotmail.com</a>
+                    <a href="mailto:info@tovous.in">info@tovous.in</a>
                   </li>
                   <li>
                     <span>Phone:</span>
-                    <a href="tel:+97470994833">+974-70994833</a>
-                    <a href="tel:+97477866538">+974-77866538</a>
-                    <a href="tel:+97430483372">+974-30483372</a>
-                    <a href="tel:+97455903227">+974-55903227</a>
+                    <a href="tel:+912235983690">+91-22-35983690</a>
                   </li>
                 </div>
                 <div className="h2nd">
                   <li>
-                    <span>WhatsApp:</span>
-                    <a href="https://wa.me/97470994833">+974-70994833</a>
-                    <a href="https://wa.me/97477866538">+974-77866538</a>
+                    <span>Registered Office:</span>
+                    <address>
+                      Biju Pattanaik Commercial Complex,
+                      <br />
+                      Room No:07, Ground Floor, Chandrasekharpur,
+                      <br />
+                      Bhubaneswar-751016
+                    </address>
                   </li>
                   <li>
-                    <span>Address:</span>
+                    <span>Mumbai Office:</span>
                     <address>
-                      Intralink Office,
+                      Shop No-18, Mahavir Kalpavruksha,
                       <br />
-                      Suq Al Majd Building 1st Floor Office No 01,02,07 Al-Garaffa, Doha-Qatar.
+                      Kasarvadavali, Thane-400615
                     </address>
                   </li>
                 </div>
@@ -117,7 +118,7 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <p>
-            &copy; {currentYear} Intralink Manpower Recruitment Agency. All rights reserved. Established in 1994
+            &copy; {currentYear} Tovous Industrial Solutions Pvt Ltd. All rights reserved. CIN: U45309OR2021PTC037991
           </p>
         </div>
       </div>
