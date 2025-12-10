@@ -8,6 +8,7 @@ export const API_ENDPOINTS = {
   gallery: `${API_BASE_URL}/gallery`,
   upload: `${API_BASE_URL}/upload`,
   login: `${API_BASE_URL}/users/login`,
+  projects: `${API_BASE_URL}/projects`,
 };
 
 export const getApiUrl = (endpoint: keyof typeof API_ENDPOINTS, id?: string): string => {

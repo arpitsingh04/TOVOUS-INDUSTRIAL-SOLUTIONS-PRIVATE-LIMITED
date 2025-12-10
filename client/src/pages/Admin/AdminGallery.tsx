@@ -257,7 +257,6 @@ const AdminGallery: React.FC = () => {
                   <input
                     type="file"
                     id="image"
-                    accept="image/*"
                     onChange={handleFileChange}
                     required
                   />
@@ -280,7 +279,6 @@ const AdminGallery: React.FC = () => {
                     <input
                       type="file"
                       id="thumbnail"
-                      accept="image/*"
                       onChange={handleThumbnailChange}
                       required
                     />
@@ -349,19 +347,3 @@ const AdminGallery: React.FC = () => {
 };
 
 export default AdminGallery;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

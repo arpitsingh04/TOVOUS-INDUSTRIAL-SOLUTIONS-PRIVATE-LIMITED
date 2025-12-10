@@ -13,6 +13,13 @@ import AboutPage from './pages/About/AboutPage';
 import JourneyPage from './pages/Journey/JourneyPage';
 import ServiceDetails from './pages/Services/ServiceDetails';
 import ServicesPage from './pages/Services/ServicesPage';
+import OperationsMaintenanceDetail from './pages/Services/OperationsMaintenanceDetail';
+import FabricationErectionDetail from './pages/Services/FabricationErectionDetail';
+import FireProtectionDetail from './pages/Services/FireProtectionDetail';
+import ElectricalInstrumentationDetail from './pages/Services/ElectricalInstrumentationDetail';
+import MROSimpleDetail from './pages/Services/MROSimpleDetail';
+import PreventiveMaintenanceDetail from './pages/Services/PreventiveMaintenanceDetail';
+import ProjectsPage from './pages/Projects/ProjectsPage';
 
 import NotFoundPage from './pages/NotFound/NotFoundPage';
 import GalleryPage from './pages/Gallery/GalleryPage';
@@ -26,6 +33,7 @@ import AdminClientLogos from './pages/Admin/AdminClientLogos';
 import AdminContacts from './pages/Admin/AdminContacts';
 import AdminRoute from './components/AdminRoute/AdminRoute';
 import AdminTestimonials from './pages/Admin/AdminTestimonials';
+import AdminProjects from './pages/Admin/AdminProjects';
 
 // Global Styles
 import ContactPage from './pages/Contact/ContactPage';
@@ -67,6 +75,13 @@ function App() {
           <Route path="/journey" element={<JourneyPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:id" element={<ServiceDetails />} />
+          <Route path="/services/operations-maintenance" element={<OperationsMaintenanceDetail />} />
+          <Route path="/services/fabrication-erection" element={<FabricationErectionDetail />} />
+          <Route path="/services/fire-protection" element={<FireProtectionDetail />} />
+          <Route path="/services/electrical-instrumentation" element={<ElectricalInstrumentationDetail />} />
+          <Route path="/services/mro-simple" element={<MROSimpleDetail />} />
+          <Route path="/services/preventive-maintenance" element={<PreventiveMaintenanceDetail />} />
+          <Route path="/projects" element={<ProjectsPage />} />
 
 
           <Route path="/gallery" element={<GalleryPage />} />
@@ -79,6 +94,7 @@ function App() {
           <Route path="/admin/clients" element={<AdminRoute><AdminClientLogos /></AdminRoute>} />
           <Route path="/admin/contacts" element={<AdminRoute><AdminContacts /></AdminRoute>} />
           <Route path="/admin/testimonials" element={<AdminRoute><AdminTestimonials /></AdminRoute>} />
+          <Route path="/admin/projects" element={<AdminRoute><AdminProjects /></AdminRoute>} />
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

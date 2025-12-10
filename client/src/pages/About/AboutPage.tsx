@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Shield, Factory, Leaf, CheckCircle, Award, Clock, Users, ArrowRight, Power } from 'lucide-react';
 import Button from '../../components/Button/Button';
 import './AboutPage.css';
-import { FlagCarousel } from '../../components/FlagCarousel/FlagCarousel';
 import ClientLogos from '../../components/ClientLogos/ClientLogos';
 
 const AboutPage: React.FC = () => {
@@ -14,8 +14,8 @@ const AboutPage: React.FC = () => {
       <section className="about-hero-section">
         <div className="container">
           <div className="about-hero-content">
-            <h1>About Intralink</h1>
-            <p>Learn about our journey, values, and commitment to excellence</p>
+            <h1>About Tovous</h1>
+            <p>Delivering Excellence in Industrial Solutions Since 2021</p>
           </div>
         </div>
       </section>
@@ -27,38 +27,37 @@ const AboutPage: React.FC = () => {
             <div className="who-we-are-text">
               <h2 className="section-title">Who We Are</h2>
               <p>
-                Intralink has grown from a recruitment-focused company into a diverse service provider 
-                operating across multiple industries and regions.
+                Founded in 2021, Tovous Industrial Solutions Pvt Ltd is an India-based company 
+                delivering high-quality industrial services to clients across the manufacturing, 
+                infrastructure, oil & gas, steel, cement and engineering sectors.
               </p>
               <p>
-                We specialize in recruiting domestic and skilled workers from countries including:
+                We are driven by one clear commitment: to meet client expectations — on time and within budget. 
+                Our approach is simple — provide the best possible service in a cost-effective and time-bound 
+                manner, without compromising on quality or safety.
               </p>
+              <p><strong>Our Services:</strong></p>
               <ul className="country-list">
-                <li>Philippines</li>
-                <li>Uganda</li>
-                <li>Ghana</li>
-                <li>Kenya</li>
-                <li>Indonesia</li>
-                <li>Sri Lanka</li>
-                <li>Ethiopia</li>
-                <li>India</li>
-                <li>Bangladesh</li>
-                <li>Burundi</li>
+                <li>Plant and equipment maintenance</li>
+                <li>Installation and commissioning of industrial systems</li>
+                <li>Automation and control system support</li>
+                <li>Technical manpower supply</li>
+                <li>Preventive and corrective maintenance</li>
+                <li>Facility and utility management</li>
               </ul>
               <p>
-                With nearly 30 years of experience, we've built a reputation for excellence in matching 
-                the right talent to the right opportunities, ensuring satisfaction for both employers and employees.
+                Every project is tailored to our client's needs with a focus on performance, safety, and reliability.
               </p>
             </div>
             <div className="who-we-are-image">
               <img 
-              src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=800" 
-              alt="Intralink team meeting" 
+              src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800" 
+              alt="Tovous Industrial Solutions" 
               />
               </div>
           </div>
         </div>
-              <FlagCarousel/>
+
 
          
       </section>
@@ -67,150 +66,108 @@ const AboutPage: React.FC = () => {
       {/* Our Promise Section */}
       <section className="section our-promise-section">
         <div className="container">
-          <h2 className="section-title">Our Promise</h2>
-          <div className="promise-cards">
-            <div className="promise-card">
-              <div className="promise-icon">
-                <span>01</span>
-              </div>
-              <h3>Trusted Staffing Solutions</h3>
-              <p>
-                We provide tailored staffing solutions for households and businesses, ensuring the perfect match for your specific needs.
-              </p>
+          <h2 className="section-title">Why Choose Tovous</h2>
+          <div className="why-choose-grid">
+            <div className="why-choose-card">
+              <div className="why-choose-icon"><Users size={38} /></div>
+              <h3>Experienced Technical Team</h3>
+              <p>Our skilled and experienced technical team brings proven expertise across all industrial sectors.</p>
             </div>
             
-            <div className="promise-card">
-              <div className="promise-icon">
-                <span>02</span>
-              </div>
-              <h3>Understanding Client Needs</h3>
-              <p>
-                Our process begins with a deep understanding of your requirements, ensuring we deliver candidates who exceed expectations.
-              </p>
+            <div className="why-choose-card">
+              <div className="why-choose-icon"><Shield size={38} /></div>
+              <h3>Safety & Compliance</h3>
+              <p>Strong focus on H.S.E. policies, safeguarding the workplace, client assets, and the environment.</p>
             </div>
             
-            <div className="promise-card">
-              <div className="promise-icon">
-                <span>03</span>
-              </div>
-              <h3>Legacy of Excellence</h3>
-              <p>
-                For nearly three decades, we've maintained a legacy of integrity, quality, and care in every placement we make.
-              </p>
+            <div className="why-choose-card">
+              <div className="why-choose-icon"><Clock size={38} /></div>
+              <h3>On-Time Delivery</h3>
+              <p>Fast mobilization and execution with proven ability to deliver projects on time and within budget.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="section our-approach-section">
+      {/* H.S.E. Policy Section */}
+      {/* <section className="section our-approach-section">
         <div className="container">
           <div className="approach-content">
-            <div className="approach-image">
-              <img 
-                src="https://images.pexels.com/photos/5673488/pexels-photo-5673488.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Intralink recruitment process" 
-              />
-            </div>
             <div className="approach-text">
-              <h2 className="section-title">Our Approach</h2>
-              <div className="approach-steps">
-                <div className="approach-step">
-                  <div className="step-number">1</div>
-                  <div className="step-content">
-                    <h3>Understand</h3>
-                    <p>We begin by understanding your specific requirements and the cultural fit you're looking for.</p>
-                  </div>
+              <h2 className="section-title">H.S.E. Policy</h2>
+              <div className="hse-policy-content">
+                <div className="policy-quote">
+                  <h3>"FATE SAVES ONCE A TIME, SAFETY SAVES ALL THE TIME."</h3>
                 </div>
-                
-                <div className="approach-step">
-                  <div className="step-number">2</div>
-                  <div className="step-content">
-                    <h3>Source</h3>
-                    <p>Our extensive network allows us to source qualified candidates from around the world.</p>
+                <p>
+                  We recognize that every worker has the right to a working environment that is free of 
+                  recognized hazards to health, safety and well-being. We invest resources to safeguard the 
+                  workplace, our clients' assets and the environment.
+                </p>
+                <p>
+                  Tovous Industrial Solutions Pvt Ltd considers quality as a corner stone in its development, 
+                  profitability and growth and the key to the long term success of our company.
+                </p>
+                <div className="policy-highlights">
+                  <div className="policy-item">
+                    <Shield className="policy-icon" size={24} />
+                    <span>Worker Safety First</span>
                   </div>
-                </div>
-                
-                <div className="approach-step">
-                  <div className="step-number">3</div>
-                  <div className="step-content">
-                    <h3>Vet</h3>
-                    <p>Rigorous screening ensures only the most qualified and trustworthy candidates are presented.</p>
+                  <div className="policy-item">
+                    <Factory className="policy-icon" size={24} />
+                    <span>Asset Protection</span>
                   </div>
-                </div>
-                
-                <div className="approach-step">
-                  <div className="step-number">4</div>
-                  <div className="step-content">
-                    <h3>Match</h3>
-                    <p>We carefully match candidates to your needs, considering both skills and cultural alignment.</p>
+                  <div className="policy-item">
+                    <Leaf className="policy-icon" size={24} />
+                    <span>Environmental Care</span>
                   </div>
-                </div>
-                
-                <div className="approach-step">
-                  <div className="step-number">5</div>
-                  <div className="step-content">
-                    <h3>Support</h3>
-                    <p>Our support continues after placement, ensuring a smooth transition and long-term success.</p>
+                  <div className="policy-item">
+                    <CheckCircle className="policy-icon" size={24} />
+                    <span>Quality Assurance</span>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="approach-image">
+              <img 
+                src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Safety at Tovous" 
+              />
+            </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+ 
+
+   
 
          {/* ClientLogos section */}
-         <ClientLogos />
+         {/* <ClientLogos /> */}
 
-      {/* Team Section */}
+   
+
+           {/* Leadership Section */}
       <section className="section team-section">
         <div className="container">
-          <h2 className="section-title">Our Leadership Team</h2>
+          <h2 className="section-title">Our Leadership</h2>
+          <p className="section-subtitle">Guided by experienced directors committed to excellence</p>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image">
-                <img 
-                  src="/intra-team/lokman.png" 
-                  alt="Team member" 
-                />
+                <span>SP</span>
               </div>
-              <h3 className="member-name">Lokman Ahmed</h3>
-              <p className="member-role">Founder & CEO</p>
+              <h3 className="member-name">Sunil Kumar Pradhan</h3>
+              <p className="member-role">Director</p>
             </div>
             
             <div className="team-member">
               <div className="member-image">
-                <img 
-                  src="/intra-team/radi.jpeg" 
-                  alt="Team member" 
-                />
+                <span>PP</span>
               </div>
-              <h3 className="member-name">Radai Bu Saad</h3>
-              <p className="member-role">Client relations Manager</p>
+              <h3 className="member-name">Pravamayee Priyadarsini</h3>
+              <p className="member-role">Director</p>
             </div>
-            
-            <div className="team-member">
-              <div className="member-image">
-                <img 
-                  src="/intra-team/rasel.png" 
-                  alt="Team member" 
-                />
-              </div>
-              <h3 className="member-name">Rasel Mahmud</h3>
-              <p className="member-role">Operation Manager</p>
-            </div>
-            
-            {/* <div className="team-member">
-              <div className="member-image">
-                <img 
-                  src="https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Team member" 
-                />
-              </div>
-              <h3 className="member-name">Elena Rodriguez</h3>
-              <p className="member-role">Client Relations</p>
-            </div> */}
           </div>
         </div>
       </section>
@@ -219,20 +176,32 @@ const AboutPage: React.FC = () => {
 
 
       {/* Call to Action */}
-      <section className="section about-cta-section">
+      <section className="about-cta-section">
         <div className="container">
-          <div className="about-cta-content">
-            <h2>Ready to experience the Intralink difference?</h2>
-            <p>
-              Let us help you find the perfect staff for your home or business.
-            </p>
-            <Button 
-              variant="primary" 
-              size="large" 
-              onClick={() => navigate('/contact')}
-            >
-              Contact Us Today
-            </Button>
+          <div className="cta-wrapper">
+            <div className="cta-content">
+              <h2>Let's Get In Touch.</h2>
+              <p>
+                Let us deliver dependable, cost-effective, and timely industrial services for your operations.
+              </p>
+              <div className="cta-buttons">
+                <button className="cta-btn cta-btn-primary" onClick={() => navigate('/contact')}>
+                  Contact Us Today
+                  <ArrowRight size={20} />
+                </button>
+                <button className="cta-btn cta-btn-secondary" onClick={() => navigate('/services')}>
+                  Our Services
+                  <ArrowRight size={20} />
+                </button>
+              </div>
+            </div>
+            <div className="cta-circles">
+              <div className="circle circle-1"></div>
+              <div className="circle circle-2"></div>
+              <div className="circle circle-3">
+                <Power size={150} className="power-icon" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

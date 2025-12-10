@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
         <div className="logo-wrapper" onClick={closeMenu}>
           <NavLink to="/">
 
-          <img className='logo' src="/intralink-logo-Photoroom.png" alt="" />
+          <img className='logo' src="/tovous-logo.png" alt="Tovous Industrial Solutions" />
           </NavLink>
 
         </div>
@@ -49,17 +49,22 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
             </li>
             <li className="nav-item">
               <NavLink to="/about" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
-                About Us
+                About
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/journey" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
-                Our Journey
+                Journey
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
-                Our Services
+                Services
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/projects" onClick={closeMenu} className={({ isActive }) => isActive ? 'active' : ''}>
+                Projects
               </NavLink>
             </li>
             <li className="nav-item">

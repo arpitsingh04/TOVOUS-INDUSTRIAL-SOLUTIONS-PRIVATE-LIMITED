@@ -1,25 +1,15 @@
 /* Journey Hero Section */
 .journey-hero-section {
   height: 400px;
-  background-image: url('https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
   display: flex;
   align-items: center;
   margin-top: 70px;
-  
-}
-
-.journey-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  
 }
 
 .journey-hero-content {
@@ -33,18 +23,14 @@
 }
 
 .journey-hero-content h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: 3rem;
   margin-bottom: var(--space-sm);
-  animation: fadeInDown 1s ease-out;
-  line-height: 1.2;
+  font-weight: 700;
 }
 
 .journey-hero-content p {
-  font-size: clamp(0.9rem, 3vw, 1.2rem);
-  opacity: 0.9;
-  animation: fadeInUp 1s ease-out 0.3s forwards;
-  opacity: 0;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  opacity: 0.95;
 }
 
 /* Journey Intro Section */
@@ -79,23 +65,30 @@
   align-items: center;
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
-  padding: var(--space-md);
-  background: var(--neutral-white);
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(30, 64, 175, 0.1);
 }
 
 .stat-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+  border-color: #1e40af;
 }
 
 .stat-number {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-red);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1e40af;
   margin-bottom: var(--space-xs);
   transition: all 0.3s ease;
+  background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .stat-label {
@@ -122,7 +115,7 @@
 .timeline-line {
   position: absolute;
   width: 4px;
-  background-color: var(--primary-red);
+  background: linear-gradient(180deg, #1e40af 0%, #059669 100%);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -146,30 +139,57 @@
 
 .vision-card,
 .mission-card {
-  background-color: var(--neutral-white);
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
   border-radius: var(--border-radius-md);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
+  padding: var(--space-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before,
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.03) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
 }
 
 .vision-card {
-  border-left: 5px solid var(--primary-red);
+  border-left: 5px solid #1e40af;
 }
 
 .mission-card {
-  border-right: 5px solid var(--primary-red);
+  border-right: 5px solid #059669;
 }
 
 .vision-card:hover,
 .mission-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(30, 64, 175, 0.15);
 }
 
-.vision-card h2,
+.vision-card:hover::before,
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+.vision-card h2 {
+  margin-bottom: var(--space-md);
+  color: #1e40af;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
 .mission-card h2 {
   margin-bottom: var(--space-md);
-  color: var(--primary-red);
+  color: #059669;
   font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 1.2;
 }
@@ -218,8 +238,22 @@
 
 .future-text {
   font-size: clamp(0.85rem, 2vw, 1.1rem);
-  line-height: 1.6;
+  line-height: 1.8;
   padding: 0 var(--space-sm);
+}
+
+.hse-quote {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 4px solid #1e40af;
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  border-radius: var(--border-radius-sm);
+  font-style: italic;
+}
+
+.hse-quote strong {
+  color: #1e40af;
+  font-size: 1.1em;
 }
 
 .future-list {
@@ -228,14 +262,15 @@
 }
 
 .future-list li {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   position: relative;
-  padding-left: var(--space-sm);
+  padding-left: var(--space-md);
   font-size: clamp(0.85rem, 2vw, 1rem);
+  line-height: 1.6;
 }
 
 .future-list li::marker {
-  color: var(--primary-red);
+  color: #059669;
 }
 
 @keyframes fadeIn {
@@ -249,10 +284,13 @@
   }
 }
 
+
+
 /* Responsive Styles */
 @media (max-width: 991px) {
   .journey-hero-section {
     height: 300px;
+    background-attachment: scroll;
   }
 
   .vision-mission-grid {
@@ -282,8 +320,17 @@
 
 @media (max-width: 768px) {
   .journey-hero-section {
-    height: 250px;
+    height: 300px;
     margin-top: 60px;
+    background-attachment: scroll;
+  }
+
+  .journey-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .journey-hero-content p {
+    font-size: 1rem;
   }
 
   .journey-stats {
@@ -315,16 +362,16 @@
 
 @media (max-width: 480px) {
   .journey-hero-section {
-    height: 200px;
+    height: 250px;
     margin-top: 60px;
   }
 
   .journey-hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .journey-hero-content p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .journey-stats {

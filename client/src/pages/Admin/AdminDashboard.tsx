@@ -10,6 +10,7 @@ interface DashboardStats {
   contactsCount: number;
   unreadContactsCount: number;
   testimonialsCount: number;
+  projectsCount: number;
 }
 
 const AdminDashboard: React.FC = () => {
@@ -19,6 +20,7 @@ const AdminDashboard: React.FC = () => {
     contactsCount: 0,
     unreadContactsCount: 0,
     testimonialsCount: 0,
+    projectsCount: 0,
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -64,6 +66,14 @@ const AdminDashboard: React.FC = () => {
         });
         const testimonialsData = await testimonialsResponse.json();
 
+        // Fetch projects
+        const projectsResponse = await fetch(API_ENDPOINTS.projects, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        const projectsData = await projectsResponse.json();
+
         // Calculate stats
         setStats({
           galleryCount: galleryData.length,
@@ -71,6 +81,7 @@ const AdminDashboard: React.FC = () => {
           contactsCount: contactsData.length,
           unreadContactsCount: contactsData.filter((contact: any) => !contact.isRead).length,
           testimonialsCount: testimonialsData.length,
+          projectsCount: projectsData.length,
         });
       } catch (error) {
         setError('Failed to fetch dashboard data');
@@ -140,6 +151,12 @@ const AdminDashboard: React.FC = () => {
             <p className="admin-stat-number">{stats.contactsCount}</p>
             <p className="admin-stat-subtitle">{stats.unreadContactsCount} unread</p>
             <Link to="/admin/contacts" className="admin-stat-link">View Contacts</Link>
+          </div>
+
+          <div className="admin-stat-card">
+            <h3>Projects</h3>
+            <p className="admin-stat-number">{stats.projectsCount}</p>
+            <Link to="/admin/projects" className="admin-stat-link">Manage Projects</Link>
           </div>
         </div>
       </div>

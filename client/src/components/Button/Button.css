@@ -19,25 +19,25 @@
 
 /* Variants */
 .button.primary {
-  background-color: var(--primary-red);
+  background-color: #dc2626;
   color: var(--neutral-white);
-  border: 2px solid var(--primary-red);
+  border: 2px solid #dc2626;
 }
 
 .button.primary:hover:not(:disabled) {
-  background-color: var(--primary-red-dark);
-  border-color: var(--primary-red-dark);
+  background-color: #b91c1c;
+  border-color: #b91c1c;
 }
 
 .button.secondary {
-  background-color: var(--neutral-white);
-  color: var(--primary-red);
-  border: 2px solid var(--primary-red);
+  background-color: #f97316;
+  color: var(--neutral-white);
+  border: 2px solid #f97316;
 }
 
 .button.secondary:hover:not(:disabled) {
-  background-color: var(--primary-red-light);
-  color: var(--neutral-white);
+  background-color: #ea580c;
+  border-color: #ea580c;
 }
 
 .button.outline {

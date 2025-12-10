@@ -62,6 +62,14 @@ const AdminSidebar: React.FC = () => {
               Contact Submissions
             </Link>
           </li>
+          <li>
+            <Link
+              to="/admin/projects"
+              className={`admin-sidebar-link ${isActive('/admin/projects') ? 'active' : ''}`}
+            >
+              Projects
+            </Link>
+          </li>
           {/* <li>
             <Link
               to="/"

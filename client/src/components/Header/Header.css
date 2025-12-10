@@ -40,14 +40,17 @@
 }
 
 .logo {
-  height: 5rem;
-  transition: transform var(--transition-speed) ease;
-  margin:0;
-  padding:0;
+  height: 4rem;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-normal) ease;
+  margin: 0;
+  padding-top: 5px;
 }
 
 .logo:hover {
   transform: scale(1.05);
+  
 }
 
 /*  */

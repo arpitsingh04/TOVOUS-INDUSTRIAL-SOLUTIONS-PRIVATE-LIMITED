@@ -1,5 +1,5 @@
 .top-bar {
-  background-color: var(--primary-red);
+  background: linear-gradient(90deg, #0d47a1 0%, #1565c0 50%, #0d47a1 100%);
   color: var(--neutral-white);
   padding: 8px 0;
   font-size: 0.85rem;
@@ -9,6 +9,7 @@
   left: 0;
   width: 100%;
   z-index: 1001;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
 }
 
 .top-bar.visible {
@@ -60,7 +61,8 @@ gap: 2px;
 }
 
 .social-icon:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

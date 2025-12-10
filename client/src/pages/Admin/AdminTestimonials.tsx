@@ -248,7 +248,6 @@ const AdminTestimonials: React.FC = () => {
                 <input
                   type="file"
                   id="image"
-                  accept="image/*"
                   onChange={handleFileChange}
                   required
                 />
@@ -313,9 +312,3 @@ const AdminTestimonials: React.FC = () => {
 };
 
 export default AdminTestimonials;
-
-
-
-
-
-

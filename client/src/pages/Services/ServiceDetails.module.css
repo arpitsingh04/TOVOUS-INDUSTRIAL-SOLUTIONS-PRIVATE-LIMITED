@@ -74,7 +74,7 @@
   }
   
   .sectionTitle {
-    color: var(--primary-red);
+    color: #1e40af;
     margin-bottom: var(--space-md);
     font-size: clamp(1.4rem, 3vw, 1.8rem);
   }
@@ -114,7 +114,7 @@
     width: 40px;
     height: 40px;
     min-width: 40px;
-    background-color: var(--primary-red);
+    background-color: #059669;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -145,12 +145,12 @@
     left: 0;
     width: 4px;
     height: 100%;
-    background-color: var(--primary-red);
+    background-color: #1e40af;
     border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
   }
   
   .ctaSection {
-    background-color: var(--neutral-light-gray);
+    background-color: #1e40af;
     padding: var(--space-xl) 0;
     text-align: center;
   }
@@ -164,12 +164,12 @@
   .ctaTitle {
     margin-bottom: var(--space-md);
     font-size: clamp(1.6rem, 3vw, 2rem);
-    color: var(--neutral-black);
+    color: var(--neutral-white);
   }
   
   .ctaDescription {
     margin-bottom: var(--space-lg);
-    /* color: var(--neutral-gray); */
+    color: var(--neutral-white);
     font-size: 1.1rem;
   }
 

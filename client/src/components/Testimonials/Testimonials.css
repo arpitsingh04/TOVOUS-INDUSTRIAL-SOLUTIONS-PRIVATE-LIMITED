@@ -29,7 +29,7 @@
 }
 
 .testimonial-card {
-  background-color: var(--neutral-white);
+  background:  #1e40af ;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-md);
   padding: var(--space-xl) var(--space-lg);
@@ -53,7 +53,7 @@
 
 .testimonial-text {
   font-style: italic;
-  color: var(--neutral-dark-gray);
+  color: var(--neutral-white);
   line-height: 1.6;
   margin: var(--space-md) 0;
   font-size: 1.1rem;
@@ -85,13 +85,13 @@
 
 .testimonial-name {
   font-weight: var(--font-weight-medium);
-  color: var(--neutral-black);
+  color: var(--neutral-white);
   font-size: 1.1rem;
 }
 
 .testimonial-role {
   font-size: 0.9rem;
-  color: var(--neutral-gray);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .testimonial-rating {

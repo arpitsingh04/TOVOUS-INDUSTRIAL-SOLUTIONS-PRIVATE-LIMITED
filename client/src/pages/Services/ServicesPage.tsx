@@ -23,7 +23,14 @@ import {
   Globe,
   Truck,
   Database,
-  ShoppingBag ,
+  ShoppingBag,
+  Search,
+  Cog,
+  Settings,
+  CheckCircle,
+  TestTube,
+  Headphones,
+  ArrowRight,
 } from "lucide-react";
 import Button from "../../components/Button/Button";
 import services from "../../data/services";
@@ -169,13 +176,11 @@ const ServicesPage: React.FC = () => {
     <div className="services-page">
       {/* Hero Section */}
       <section className="services-hero-section">
-        <div className="container">
-          <div className="services-hero-content">
-            <h1>Our Services</h1>
-            <p>
-              Comprehensive recruitment and business solutions for every need
-            </p>
-          </div>
+        <div className="services-hero-content">
+          <h1>Our Services</h1>
+          <p>
+            Comprehensive industrial solutions for manufacturing, oil & gas, and engineering sectors
+          </p>
         </div>
       </section>
 
@@ -183,32 +188,73 @@ const ServicesPage: React.FC = () => {
       <section className="service-section">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
+          <p className="services-subtitle">Comprehensive industrial solutions tailored to your needs</p>
 
-          {/* Specialized Services Tree */}
-          <Dropdown
-            title="Specialized Industry Solutions"
-            icon={<Briefcase size={24} className="text-primary-red" />}
-            defaultOpen={true}
-          >
-            <div className="tree-container">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="tree-node"
-                  onClick={() => navigate(`/services/${service.id}`)}
-                >
-                  <div className="tree-node-icon">
-                    <service.icon />
-                  </div>
-                  <h3 className="tree-node-title">{service.name}</h3>
-                  <p className="tree-node-description">{service.description}</p>
+          <div className="services-grid">
+            <div className="service-card-pro service-card-1">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <Settings size={32} />
                 </div>
-              ))}
+                <h3>Plant and Equipment Maintenance</h3>
+                <p className="service-description">Comprehensive maintenance services for industrial plants and equipment.</p>
+                <a href="/services/plant-equipment-maintenance" className="service-link">Learn More →</a>
+              </div>
             </div>
-          </Dropdown>
+            <div className="service-card-pro service-card-2">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <Cog size={32} />
+                </div>
+                <h3>Installation and Commissioning</h3>
+                <p className="service-description">Professional installation and commissioning of industrial systems.</p>
+                <a href="/services/installation-commissioning" className="service-link">Learn More →</a>
+              </div>
+            </div>
+            <div className="service-card-pro service-card-3">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <Activity size={32} />
+                </div>
+                <h3>Automation and Control System Support</h3>
+                <p className="service-description">Advanced automation and control system solutions.</p>
+                <a href="/services/automation-control" className="service-link">Learn More →</a>
+              </div>
+            </div>
+            <div className="service-card-pro service-card-4">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <Users size={32} />
+                </div>
+                <h3>Technical Manpower Supply</h3>
+                <p className="service-description">Skilled technical manpower for industrial operations.</p>
+                <a href="/services/technical-manpower" className="service-link">Learn More →</a>
+              </div>
+            </div>
+            <div className="service-card-pro service-card-5">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <CheckCircle size={32} />
+                </div>
+                <h3>Preventive and Corrective Maintenance</h3>
+                <p className="service-description">Proactive and reactive maintenance solutions.</p>
+                <a href="/services/preventive-corrective" className="service-link">Learn More →</a>
+              </div>
+            </div>
+            <div className="service-card-pro service-card-6">
+              <div className="service-content">
+                <div className="service-icon-box">
+                  <Building size={32} />
+                </div>
+                <h3>Facility and Utility Management</h3>
+                <p className="service-description">Complete facility and utility management services.</p>
+                <a href="/services/facility-utility" className="service-link">Learn More →</a>
+              </div>
+            </div>
+          </div>
 
           {/* Domestic Staff Section */}
-          <Dropdown
+          {/* <Dropdown
             title="Domestic & Support Staff Recruitment"
             icon={<Users size={24} className="text-primary-red" />}
           >
@@ -224,10 +270,10 @@ const ServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </Dropdown>
+          </Dropdown> */}
 
           {/* Industry Section */}
-          <Dropdown
+          {/* <Dropdown
             title="Skilled Worker Recruitment by Industry"
             icon={<Briefcase size={24} className="text-primary-red" />}
           >
@@ -245,10 +291,10 @@ const ServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </Dropdown>
+          </Dropdown> */}
 
           {/* Business Services Section */}
-          <Dropdown
+          {/* <Dropdown
             title="Additional Business Services"
             icon={<Building size={24} className="text-primary-red" />}
           >
@@ -262,66 +308,66 @@ const ServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </Dropdown>
+          </Dropdown> */}
         </div>
       </section>
 
       {/* Process Section */}
       <section className="section process-section">
         <div className="container">
-          <h2 className="section-title">Our Recruitment Process</h2>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>Needs Assessment</h3>
+          <h2 className="section-title">Our Project Execution Process</h2>
+          <div className="process-grid">
+            <div className="process-card">
+              <div className="process-icon"><Search size={38} /></div>
+              <h3>Requirements Analysis</h3>
               <p>
-                We begin by understanding your specific requirements through
-                detailed consultation.
+                We begin by understanding your project requirements through
+                detailed technical consultation and site assessment.
               </p>
             </div>
 
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>Candidate Sourcing</h3>
+            <div className="process-card">
+              <div className="process-icon"><Cog size={38} /></div>
+              <h3>Engineering & Design</h3>
               <p>
-                Our extensive network allows us to identify qualified candidates
-                matching your criteria.
+                Our technical team develops comprehensive engineering solutions
+                and detailed project plans.
               </p>
             </div>
 
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Rigorous Screening</h3>
+            <div className="process-card">
+              <div className="process-icon"><Settings size={38} /></div>
+              <h3>Resource Mobilization</h3>
               <p>
-                Candidates undergo thorough verification, skills assessment, and
-                background checks.
+                Fast mobilization of skilled manpower, equipment, and materials
+                to ensure timely project start.
               </p>
             </div>
 
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Client Selection</h3>
+            <div className="process-card">
+              <div className="process-icon"><CheckCircle size={38} /></div>
+              <h3>Execution & Quality Control</h3>
               <p>
-                We present the best candidates for your review and facilitate
-                the interview process.
+                Professional execution with strict quality control and safety
+                compliance throughout the project.
               </p>
             </div>
 
-            <div className="process-step">
-              <div className="step-number">05</div>
-              <h3>Visa & Documentation</h3>
+            <div className="process-card">
+              <div className="process-icon"><TestTube size={38} /></div>
+              <h3>Testing & Commissioning</h3>
               <p>
-                We handle all necessary paperwork and visa processing for
-                international workers.
+                Comprehensive testing, commissioning, and performance
+                verification before handover.
               </p>
             </div>
 
-            <div className="process-step">
-              <div className="step-number">06</div>
-              <h3>Deployment & Support</h3>
+            <div className="process-card">
+              <div className="process-icon"><Headphones size={38} /></div>
+              <h3>Support & Maintenance</h3>
               <p>
-                We ensure smooth transition and provide ongoing support for both
-                employers and employees.
+                Ongoing support, maintenance services, and performance
+                monitoring to ensure optimal operations.
               </p>
             </div>
           </div>
@@ -329,21 +375,33 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="section services-cta-section">
+      <section className="services-cta-section">
         <div className="container">
-          <div className="services-cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>
-              Contact us today to discuss your staffing needs and discover how
-              we can help.
-            </p>
-            <Button
-              variant="primary"
-              size="large"
-              onClick={() => navigate("/contact")}
-            >
-              Contact Us Now
-            </Button>
+          <div className="cta-wrapper" style={{background: 'linear-gradient(135deg, #1e40af 0%, #059669 100%)'}}>
+            <div className="cta-content">
+              <h2>Ready to Get Started?</h2>
+              <p>
+                Contact us today to discuss your industrial project needs and discover how
+                we can deliver excellence on time and within budget.
+              </p>
+              <div className="cta-buttons">
+                <button className="cta-btn cta-btn-primary" onClick={() => navigate('/contact')}>
+                  Contact Us Now
+                  <ArrowRight size={20} />
+                </button>
+                <button className="cta-btn cta-btn-secondary" onClick={() => navigate('/projects')}>
+                  View Projects
+                  <ArrowRight size={20} />
+                </button>
+              </div>
+            </div>
+            <div className="cta-circles">
+              <div className="circle circle-1"></div>
+              <div className="circle circle-2"></div>
+              <div className="circle circle-3">
+                <Settings size={150} className="power-icon" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

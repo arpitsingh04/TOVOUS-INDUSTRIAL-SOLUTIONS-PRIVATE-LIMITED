@@ -1,25 +1,13 @@
 /* Contact Hero Section */
 .contact-hero-section {
   height: 400px;
-  background-image: url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   align-items: center;
   margin-top: 70px;
-}
-
-.contact-hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  /* background: var(--primary-red); */
 }
 
 .contact-hero-content {
@@ -85,13 +73,20 @@
 .contact-icon {
   width: 50px;
   height: 50px;
-  background-color: var(--primary-red);
+  background: #059669;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--neutral-white);
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-detail-item:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
 }
 
 .contact-text h3 {
@@ -107,14 +102,16 @@
 }
 
 .contact-text a {
-  color: var(--primary-red);
-  transition: color var(--transition-normal);
+  color: #1e40af;
+  transition: all var(--transition-normal);
   display: inline-block;
   margin-bottom: 4px;
+  font-weight: 500;
 }
 
 .contact-text a:hover {
-  color: var(--primary-red-dark);
+  color: #059669;
+  transform: translateX(3px);
 }
 
 .business-hours h3 {
@@ -140,10 +137,11 @@
 }
 
 .contact-form-wrapper {
- 
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: var(--space-lg);
+  border-top: 4px solid #1e40af;
 }
 
 .contact-form-wrapper h2 {
@@ -180,7 +178,7 @@
 
 /* FAQ Section */
 .faq-section {
-  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  background: #f5f7fa;
 }
 
 .faq-header {
@@ -206,7 +204,7 @@
   padding: var(--space-lg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
   transition: all 0.3s ease;
-  border-left: 4px solid var(--primary-red);
+  border-left: 4px solid #059669;
   position: relative;
 }
 
@@ -219,7 +217,7 @@
   position: absolute;
   top: -15px;
   right: 20px;
-  background: linear-gradient(135deg, var(--primary-red) 0%, #c41e3a 100%);
+  background: #1e40af;
   color: var(--neutral-white);
   width: 45px;
   height: 45px;
@@ -229,7 +227,7 @@
   justify-content: center;
   font-weight: bold;
   font-size: 1.1rem;
-  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
 }
 
 .faq-item h3 {

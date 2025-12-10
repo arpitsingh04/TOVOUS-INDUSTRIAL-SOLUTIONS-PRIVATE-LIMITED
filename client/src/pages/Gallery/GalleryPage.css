@@ -63,10 +63,10 @@
 
 .filter-button {
   padding: var(--space-sm) var(--space-lg);
-  border: 2px solid var(--primary-red);
+  border: 2px solid #059669;
   border-radius: var(--border-radius-md);
   background: transparent;
-  color: var(--primary-red);
+  color: #059669;
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -74,12 +74,13 @@
 }
 
 .filter-button.active {
-  background: var(--primary-red);
+  background: #1e40af;
   color: var(--neutral-white);
+  border-color: #1e40af;
 }
 
 .filter-button:hover:not(.active) {
-  background: rgba(178, 34, 34, 0.1);
+  background: rgba(5, 150, 105, 0.1);
 }
 
 /* Gallery Grid */

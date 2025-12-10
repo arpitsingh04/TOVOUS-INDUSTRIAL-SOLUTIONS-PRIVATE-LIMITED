@@ -193,7 +193,6 @@ const AdminClientLogos: React.FC = () => {
                 <input
                   type="file"
                   id="logo"
-                  accept="image/*"
                   onChange={handleFileChange}
                   required
                 />
@@ -247,14 +246,3 @@ const AdminClientLogos: React.FC = () => {
 };
 
 export default AdminClientLogos;
-
-
-
-
-
-
-
-
-
-
-

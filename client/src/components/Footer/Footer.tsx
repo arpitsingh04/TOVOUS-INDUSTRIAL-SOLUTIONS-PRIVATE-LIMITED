@@ -19,8 +19,8 @@ const Footer: React.FC = () => {
             <NavLink to="/">
               <img
                 className="logo"
-                src="/intralink-logo-Photoroom.png"
-                alt=""
+                src="/tovous-logo.png"
+                alt="Tovous Industrial Solutions"
               />
             </NavLink>
             <p className="footer-description">
@@ -41,6 +41,7 @@ const Footer: React.FC = () => {
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/journey">Our Journey</Link></li>
                 <li><Link to="/services">Our Services</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
                 <li><Link to="/gallery">Gallery</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
               </ul>
@@ -49,11 +50,11 @@ const Footer: React.FC = () => {
             <div className="footer-col">
               <h5 className="footer-col-title">Services</h5>
               <ul className="footer-nav">
-                <li><Link to="/services">Domestic Staff</Link></li>
-                <li><Link to="/services">Skilled Workers</Link></li>
-                <li><Link to="/services">Cleaning Services</Link></li>
-                <li><Link to="/services">Digital Marketing</Link></li>
-                <li><Link to="/services">Business Services</Link></li>
+                <li><Link to="/services">Operations & Maintenance</Link></li>
+                <li><Link to="/services">Fabrication & Erection</Link></li>
+                <li><Link to="/services">Fire Protection Systems</Link></li>
+                <li><Link to="/services">Electrical & Instrumentation</Link></li>
+                <li><Link to="/services">Technical Manpower</Link></li>
               </ul>
             </div>
           </div>

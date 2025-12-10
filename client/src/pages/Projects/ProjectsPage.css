@@ -1,0 +1,384 @@
+.projects-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.projects-hero-section {
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.projects-hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projects-hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.projects-hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.projects-intro-section {
+  padding: 5rem 0 3rem;
+  background: white;
+}
+
+.projects-intro-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #424242;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.projects-list-section {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.projects-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid-modern {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.projects-loading,
+.projects-empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  font-size: 1.125rem;
+  color: #757575;
+}
+
+.achievements-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #1E3A8A 0%, #0D47A1 100%);
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  color: white;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(30, 58, 138, 0.25);
+}
+
+.achievement-icon {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #2ecc71;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+  border: 3px solid white;
+}
+
+.achievement-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.achievement-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.projects-cta-section {
+  padding: 0;
+  margin: 4rem 0;
+}
+
+.cta-wrapper {
+  background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+  border-radius: 32px;
+  padding: 5rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 650px;
+}
+
+.cta-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.cta-content p {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-primary {
+  background: #000;
+  color: white;
+}
+
+.cta-btn-primary:hover {
+  background: #1f2937;
+  transform: translateX(4px);
+}
+
+.cta-btn-secondary {
+  background: #000;
+  color: white;
+}
+
+.cta-btn-secondary:hover {
+  background: #1f2937;
+  transform: translateX(4px);
+}
+
+.cta-circles {
+  position: absolute;
+  right: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-1 {
+  width: 700px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.circle-2 {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.circle-3 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.power-icon {
+  color: white;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .projects-hero-section {
+    height: 250px;
+    background-attachment: scroll;
+  }
+
+  .projects-grid-modern {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .achievements-section {
+    padding: 3rem 0;
+  }
+
+  .cta-wrapper {
+    padding: 3.5rem 2.5rem;
+    min-height: 350px;
+    border-radius: 24px;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-circles {
+    width: 500px;
+    height: 500px;
+    right: -100px;
+  }
+
+  .circle-1 {
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle-2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-3 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .achievement-card {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-hero-section {
+    height: 200px;
+  }
+
+  .cta-wrapper {
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .cta-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .cta-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cta-circles {
+    width: 350px;
+    height: 350px;
+    right: -175px;
+  }
+
+  .circle-1 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .power-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

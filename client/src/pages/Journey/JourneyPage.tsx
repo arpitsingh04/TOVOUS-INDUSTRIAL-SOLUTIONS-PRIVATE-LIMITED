@@ -6,16 +6,16 @@ import styles from './JourneyPage.module.css';
 const JourneyPage: React.FC = () => {
   const [counts, setCounts] = useState({
     years: 0,
-    countries: 0,
-    placements: 0,
-    divisions: 0
+    projects: 0,
+    clients: 0,
+    services: 0
   });
   
   const targetCounts = {
-    years: 30,
-    countries: 10,
-    placements: 10000,
-    divisions: 4
+    years: 3,
+    projects: 8,
+    clients: 15,
+    services: 5
   };
   
   const statsRef = useRef<HTMLDivElement>(null);
@@ -55,9 +55,9 @@ const JourneyPage: React.FC = () => {
       
       setCounts({
         years: Math.round(easeOutQuad(progress) * targetCounts.years),
-        countries: Math.round(easeOutQuad(progress) * targetCounts.countries),
-        placements: Math.round(easeOutQuad(progress) * targetCounts.placements),
-        divisions: Math.round(easeOutQuad(progress) * targetCounts.divisions)
+        projects: Math.round(easeOutQuad(progress) * targetCounts.projects),
+        clients: Math.round(easeOutQuad(progress) * targetCounts.clients),
+        services: Math.round(easeOutQuad(progress) * targetCounts.services)
       });
 
       if (currentStep >= steps) {
@@ -79,7 +79,7 @@ const JourneyPage: React.FC = () => {
         <div className="container">
           <div className="journey-hero-content">
             <h1>Our Journey</h1>
-            <p>Explore the milestones that have shaped Intralink since 1994</p>
+            <p>Building Excellence in Industrial Solutions Since 2021</p>
           </div>
         </div>
       </section>
@@ -90,26 +90,27 @@ const JourneyPage: React.FC = () => {
           <div className="journey-intro-content">
             <h2 className="section-title">Our Growth Story</h2>
             <p className="journey-intro-text">
-              Since our founding in 1994, Intralink has evolved from a small recruitment agency into a 
-              multi-service international company. Our growth journey reflects our commitment to excellence, 
-              adaptability, and understanding of market needs across different regions.
+              Founded in 2021, Tovous Industrial Solutions Pvt Ltd is an India-based company delivering 
+              high-quality industrial services to clients across manufacturing, infrastructure, oil & gas, 
+              steel, cement and engineering sectors. We are driven by one clear commitment: to meet client 
+              expectations — on time and within budget.
             </p>
             <div className="journey-stats" ref={statsRef}>
               <div className="stat-item">
                 <span className="stat-number">{counts.years}+</span>
-                <span className={styles['stat-label']}>Years of Experience</span>
+                <span className={styles['stat-label']}>Years of Excellence</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">{counts.countries}+</span>
-                <span className={styles['stat-label']}>Countries of Operation</span>
+                <span className="stat-number">{counts.projects}+</span>
+                <span className={styles['stat-label']}>Major Projects</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">{counts.placements}+</span>
-                <span className={styles['stat-label']}>Successful Placements</span>
+                <span className="stat-number">{counts.clients}+</span>
+                <span className={styles['stat-label']}>Trusted Clients</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">{counts.divisions}</span>
-                <span className={styles['stat-label']}>Business Divisions</span>
+                <span className="stat-number">{counts.services}</span>
+                <span className={styles['stat-label']}>Core Services</span>
               </div>
             </div>
           </div>
@@ -125,72 +126,58 @@ const JourneyPage: React.FC = () => {
             <div className="timeline-line"></div>
             
             <TimelineItem 
-              year="1994"
+              year="2021"
               title="Foundation"
-              description="Intralink was established on September 19, 1994, focusing on domestic staff recruitment for local households."
+              description="Tovous Industrial Solutions Pvt Ltd was established with CIN NO: U45309OR2021PTC037991, committed to delivering high-quality industrial services."
               isLeft={true}
             />
             
             <TimelineItem 
-              year="1997"
-              title="International Expansion"
-              description="Expanded recruitment services to source workers from the Philippines and other Asian countries."
+              year="2021"
+              title="ONGC Kesanapalli Project"
+              description="Successfully completed construction of elevated flare systems at Kesanapalli Installation, Rajahmundry Asset for ONGC through Ador Welding Limited."
               isLeft={false}
             />
             
             <TimelineItem 
-              year="2000"
-              title="Trading Division Launch"
-              description="Established general trading operations, sourcing and supplying products for local and international markets."
+              year="2022"
+              title="IOCL Paradip Refinery"
+              description="Executed replacement of existing fabrication & erection of flare structures and flare tip replacement work at BOOT-3 Terminal, IOCL Refinery Paradip."
               isLeft={true}
             />
             
             <TimelineItem 
-              year="2002"
-              title="Construction Services"
-              description="Launched construction services division providing both manpower and project support."
+              year="2022"
+              title="GAIL Usar Project"
+              description="Completed fabrication, erection and commissioning of Regeneration Air Heater Unit at GAIL Usar, including E&I works for 52 Mtr height structure."
               isLeft={false}
             />
             
             <TimelineItem 
-              year="2010"
-              title="Export & Import Division"
-              description="Expanded into global trade of consumer goods, construction materials, and industrial equipment."
+              year="2023"
+              title="BARC Tarapur"
+              description="Delivered fabrication and erection of structural steel & piping works for Package-110 at BARC, Tarapur through Tata Projects Limited."
               isLeft={true}
             />
             
             <TimelineItem 
-              year="2012"
-              title="Cleaning & Hospitality Services"
-              description="Introduced professional cleaning and hospitality services for homes, offices, hotels, and events."
+              year="2023"
+              title="IREL Partnership"
+              description="Secured multiple contracts with Indian Rare Earth Limited (Department of Atomic Energy) for AMC of mining works and structural fabrication."
               isLeft={false}
             />
             
             <TimelineItem 
-              year="2014"
-              title="Transport Services"
-              description="Established transport services with reliable fleets and licensed professional drivers."
-              isLeft={true}
-            />
-            
-            <TimelineItem 
-              year="2017"
-              title="Digital Marketing Division"
-              description="Launched comprehensive digital marketing services including SEO, PPC, social media, and content creation."
-              isLeft={false}
-            />
-            
-            <TimelineItem 
-              year="2020"
-              title="African Expansion"
-              description="Strengthened recruitment networks in Uganda, Ghana, Kenya, and other African nations."
+              year="2024"
+              title="Service Expansion"
+              description="Expanded service portfolio to include Operations & Maintenance, Fire Protection Systems, and Electrical & Instrumentation works."
               isLeft={true}
             />
             
             <TimelineItem 
               year="Present"
-              title="Continued Growth"
-              description="Today, Intralink continues to expand its services and global reach, adapting to market demands and technological advancements."
+              title="Industry Leader"
+              description="Today, Tovous continues to deliver dependable, cost-effective industrial services, trusted by top-tier clients across India."
               isLeft={false}
             />
           </div>
@@ -204,16 +191,16 @@ const JourneyPage: React.FC = () => {
             <div className="vision-card">
               <h2>Our Vision</h2>
               <p>
-                To be the leading global provider of integrated manpower and business solutions, 
-                connecting talent with opportunity and delivering exceptional service across all our divisions.
+                To be a trusted industrial services partner across India, known for quality, speed, 
+                and meeting expectations — every time.
               </p>
             </div>
             
             <div className="mission-card">
               <h2>Our Mission</h2>
               <p>
-                To empower businesses and households through reliable, ethical, and professional staffing 
-                and service solutions that exceed expectations and create lasting value for all stakeholders.
+                To deliver dependable, cost-effective, and timely industrial services that keep 
+                client operations running at their best.
               </p>
             </div>
           </div>
@@ -223,29 +210,30 @@ const JourneyPage: React.FC = () => {
       {/* Future Plans */}
       <section className="section future-plans-section">
         <div className="container">
-          <h2 className="section-title">Looking Ahead</h2>
+          <h2 className="section-title">Why Choose Tovous</h2>
           <div className="future-content">
             <div className="future-image">
               <img 
-                src="https://images.pexels.com/photos/6224/hands-people-woman-working.jpg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Future planning at Intralink" 
+                src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Tovous Industrial Excellence" 
               />
             </div>
             <div className="future-text">
               <p>
-                As we look to the future, Intralink remains committed to innovation and excellence. 
-                Our strategic plans include:
+                Tovous Industrial Solutions stands out in the industry through our unwavering commitment 
+                to excellence and client satisfaction:
               </p>
               <ul className="future-list">
-                <li>Expanding our digital services to include AI-powered recruitment solutions</li>
-                <li>Strengthening our presence in emerging markets across Asia and Africa</li>
-                <li>Developing sustainable and ethical recruitment practices</li>
-                <li>Enhancing our training programs to provide even more skilled professionals</li>
-                <li>Building stronger partnerships with international organizations and governments</li>
+                <li>Experienced and skilled technical team</li>
+                <li>Strong focus on safety and compliance</li>
+                <li>Fast mobilization and execution</li>
+                <li>Proven ability to deliver on time</li>
+                <li>Trusted by top-tier clients including ONGC, IOCL, GAIL, and IREL</li>
               </ul>
               <p>
-                We're excited to continue our journey of growth and service excellence, adapting to new 
-                challenges and opportunities in the global marketplace.
+                We recognize that every worker has the right to a working environment that is free of 
+                recognized hazards. We invest resources to safeguard the workplace, our clients' assets, 
+                and the environment.
               </p>
             </div>
           </div>
