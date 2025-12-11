@@ -1,7 +1,7 @@
 {
-  "name": "intralink-server",
+  "name": "tovous-server",
   "version": "1.0.0",
-  "description": "Backend server for Intralink website",
+  "description": "Backend server for tovous website",
   "main": "server.js",
   "type": "module",
   "scripts": {

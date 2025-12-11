@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
             title="Tovous Industrial Solutions Office Location"
           ></iframe> */}
           {/* <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57713.595469296!2d51.5328719!3d25.3008536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dba6cabb7869%3A0xf9b595ecebabb1e8!2sINTRALINK%20MANPOWER!5e0!3m2!1sen!2sin!4v1746531038057!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57713.595469296!2d51.5328719!3d25.3008536!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dba6cabb7869%3A0xf9b595ecebabb1e8!2stovous%20MANPOWER!5e0!3m2!1sen!2sin!4v1746531038057!5m2!1sen!2sin"
             width="600"
             height="450"
             style={{border:0}}
@@ -141,13 +141,16 @@ const ContactPage: React.FC = () => {
              title="Tovous Industrial Solutions Office Location"
           ></iframe> */}
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.3278530959087!2d51.45819399999999!3d25.3267773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dba6cabb7869%3A0xf9b595ecebabb1e8!2sINTRALINK%20MANPOWER!5e0!3m2!1sen!2sin!4v1747294048382!5m2!1sen!2sin" 
-          width="600" 
-          height="450" 
-          style={{border:0 }}
-          allowFullScreen={true}
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3434311503283!2d72.95957652466979!3d19.267425795936155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba4f4f53a95%3A0xbd4623ae432dbf51!2sMahavir%20Kalpavruksha!5e0!3m2!1sen!2sin!4v1765434067115!5m2!1sen!2sin" 
+            width="600" 
+            height="450" 
+            style={{border:0}} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Tovous Industrial Solutions Office Location"
+          ></iframe>
         </div>
       </section>
 
