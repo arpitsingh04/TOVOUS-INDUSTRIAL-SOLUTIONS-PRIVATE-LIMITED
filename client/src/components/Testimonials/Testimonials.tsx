@@ -19,7 +19,7 @@ const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const autoPlayRef = useRef<number | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
-  
+
   // Touch handling
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
@@ -27,11 +27,11 @@ const Testimonials: React.FC = () => {
   const fetchTestimonials = useCallback(async () => {
     try {
       const response = await fetch(API_ENDPOINTS.testimonials);
-      
+
       if (!response.ok) {
         throw new Error('Failed to fetch testimonials');
       }
-      
+
       const data = await response.json();
       setTestimonials(data);
     } catch (error) {
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
         nextTestimonial();
       }, 5000);
     }
-    
+
     return () => {
       if (autoPlayRef.current) {
         clearInterval(autoPlayRef.current);
@@ -65,8 +65,8 @@ const Testimonials: React.FC = () => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       stars.push(
-        <span key={i} className={`testimonial-star ${i <= rating ? 'filled' : 'empty'}`} 
-              aria-hidden="true">
+        <span key={i} className={`testimonial-star ${i <= rating ? 'filled' : 'empty'}`}
+          aria-hidden="true">
           ★
         </span>
       );
@@ -81,26 +81,26 @@ const Testimonials: React.FC = () => {
   const truncateReview = (review: string) => {
     const minLength = 150;
     const maxLength = 200;
-    
+
     if (review.length < minLength) {
       return review;
     }
-    
+
     if (review.length > maxLength) {
       return review.substring(0, maxLength) + '...';
     }
-    
+
     return review;
   };
 
   const nextTestimonial = useCallback(() => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   }, [testimonials.length]);
 
   const prevTestimonial = useCallback(() => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   }, [testimonials.length]);
@@ -122,16 +122,16 @@ const Testimonials: React.FC = () => {
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
-  
+
   const handleTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
-  
+
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 50) {
       nextTestimonial();
     }
-    
+
     if (touchStart - touchEnd < -50) {
       prevTestimonial();
     }
@@ -139,16 +139,16 @@ const Testimonials: React.FC = () => {
 
   // Handle image error
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = 'https://intralinkgroup.net/placeholder-avatar.png'; // Fallback image
+    e.currentTarget.src = `${SERVER_BASE_URL}/placeholder-avatar.png`; // Fallback image
   };
 
   // Format image URL correctly
   const getImageUrl = (imagePath: string) => {
     if (!imagePath) return `${SERVER_BASE_URL}/placeholder-avatar.png`;
-    
+
     // If it's already a full URL, return it
     if (imagePath.startsWith('http')) return imagePath;
-    
+
     // If it's a relative path, add the base URL
     return `${SERVER_BASE_URL}${imagePath.startsWith('/') ? imagePath : `/${imagePath}`}`;
   };
@@ -157,7 +157,7 @@ const Testimonials: React.FC = () => {
     <section className="section testimonials-section">
       <div className="container">
         <h2 className="section-title">What Our Clients Say</h2>
-        
+
         {loading ? (
           <div className="testimonials-loading" aria-live="polite">Loading testimonials...</div>
         ) : error ? (
@@ -165,15 +165,15 @@ const Testimonials: React.FC = () => {
         ) : testimonials.length === 0 ? (
           <div className="testimonials-empty" aria-live="polite">No testimonials available.</div>
         ) : (
-          <div 
-            className="testimonials-carousel" 
+          <div
+            className="testimonials-carousel"
             onKeyDown={handleKeyDown}
             tabIndex={0}
             role="region"
             aria-label="Testimonials carousel"
           >
-            <div 
-              className="testimonials-slider" 
+            <div
+              className="testimonials-slider"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               ref={sliderRef}
               onTouchStart={handleTouchStart}
@@ -181,8 +181,8 @@ const Testimonials: React.FC = () => {
               onTouchEnd={handleTouchEnd}
             >
               {testimonials.map((testimonial, index) => (
-                <div 
-                  key={testimonial._id} 
+                <div
+                  key={testimonial._id}
                   className="testimonial-slide"
                   aria-hidden={currentIndex !== index}
                 >
@@ -192,8 +192,8 @@ const Testimonials: React.FC = () => {
                       {truncateReview(testimonial.review)}
                     </div>
                     <div className="testimonial-author">
-                      <img 
-                        src={getImageUrl(testimonial.image)} 
+                      <img
+                        src={getImageUrl(testimonial.image)}
                         alt=""
                         className="testimonial-image"
                         onError={handleImageError}
@@ -209,26 +209,26 @@ const Testimonials: React.FC = () => {
                 </div>
               ))}
             </div>
-            
-            <button 
-              className="testimonial-nav prev" 
+
+            <button
+              className="testimonial-nav prev"
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
             >
               ‹
             </button>
-            <button 
-              className="testimonial-nav next" 
+            <button
+              className="testimonial-nav next"
               onClick={nextTestimonial}
               aria-label="Next testimonial"
             >
               ›
             </button>
-            
+
             <div className="testimonial-dots" role="tablist">
               {testimonials.map((_, index) => (
-                <button 
-                  key={index} 
+                <button
+                  key={index}
                   className={`testimonial-dot ${index === currentIndex ? 'active' : ''}`}
                   onClick={() => goToTestimonial(index)}
                   aria-label={`Go to testimonial ${index + 1}`}

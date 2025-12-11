@@ -1,6 +1,6 @@
-# Intralink Admin Panel
+# Tovous Industrial Solutions Admin Panel
 
-This is the admin panel for the Intralink website, built with React and TypeScript.
+This is the admin panel for the Tovous Industrial Solutions website, built with React and TypeScript.
 
 ## Features
 

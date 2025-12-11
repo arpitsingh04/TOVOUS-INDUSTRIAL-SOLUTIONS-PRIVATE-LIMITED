@@ -9,7 +9,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: var(--primary-red);
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
   border-radius: 50%;
   top: 20px;
   z-index: 1;
@@ -69,7 +69,7 @@
 
 .timeline-year {
   display: inline-block;
-  background-color: var(--primary-red);
+  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
   color: var(--neutral-white);
   padding: 4px 12px;
   border-radius: var(--border-radius-sm);
